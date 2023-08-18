@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <title>To-Do List</title>
+    <script type="module" src="../dist/main.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+<!-----------------------------HEADER-------------------------------> 
+        <header>
+            <div class="row" id="header">
+                <h3>To-Do List</h3>
+            </div>
+        </header>
+        <hr>
+        <main>
+            <div class="row">
+<!-----------------------------NAVBAR------------------------------->                
+                <aside class="col-md-2">
+                    <nav>
+                        <ul>
+                            <li>Tasks</li>
+                            <li>Important</li>
+                            <li>Completed</li>
+                            <li>Custom Lists</li>
+                        </ul>
+                    </nav>
+                </aside>
+<!-----------------------------MAIN AREA------------------------------->                 
+                <section class="col-md-10" id="mainArea">
+                    
+                        <h4>Category Title</h4>
+                        <hr>
+                        <button class="btn-add-task" id="addTask">Add New Task</button>
+                    
+                    
+                </section>
+            </div>
+        </main>
+    </div>
+
+<!-----------------------------MODAL------------------------------->    
+<div class="modal" id="myModal">MODAL
+    <div class="modal-overlay"></div>
+    <div id="modalContent" class="modal-content">
+            <form action="" method="get" id="taskForm">
+                <label for="title">Title</label>
+                <input type="text" id="title" minlength="3" maxlength="50" value="" required>Title
+                <label for="description">Description</label>
+                <textarea name="" cols="30" rows="10" maxlength="500" id="description" form="taskForm" required></textarea>
+                <label for="completed">Completed</label>
+                <input type="checkbox" name="Completed" id="completed">
+                <label for="important">Important</label>
+                <input type="checkbox" name="Important" id="important">
+                <label for="customList">Custom List</label>
+                <select name="Custom List" id="customList"></select>
+                <label for="taskColor">Task Color</label>
+                <select type="color" name="TaskColor" id="taskColor">
+                    <option value="#EE82EE">Purple</option>
+                    <option value="#008000">Green</option>
+                    <option value="#FFD700">Yellow</option>
+                    <option value="#FF8C00">Orange</option>
+                    <option value="#DCDCDC">Grey</option>
+                    <option value="#FFC0CB">Pink</option>
+                    <option value="#0071c5">Blue</option>
+                </select>
+                <button class="" id="cancelModal">Cancel</button>
+                <button type="submit" id="submitTask">Accept</button>
+            </form>
+    </div>
+</div>
+    <script> src= "https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"</script>
+</body>
+</html>

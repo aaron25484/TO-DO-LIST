@@ -1,0 +1,67 @@
+
+#header{
+    text-align: center;
+}
+
+#mainArea{
+    text-align: center;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+}
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
+    cursor: url(/assets/img/cursorhover.png), auto; 
+}
+
+.modal-content {
+    background: rgb(0,0,0);
+    background: linear-gradient(146deg, rgba(0,0,0,1) 0%, rgba(1,124,102,1) 50%, rgba(0,90,97,1) 100%);
+    margin: 20% auto;
+    padding: 20px;
+    max-width: 50%;
+    max-height: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    z-index: 2;
+    text-align: center;
+    border: 1px solid black;
+}
+.modal-show {
+    animation: modalShowAnimation 0.5s forwards;
+}
+
+.modal-hide {
+    animation: modalHideAnimation 0.5s forwards;
+}
+
+@keyframes modalShowAnimation {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes modalHideAnimation {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(100%);
+    }
+}
