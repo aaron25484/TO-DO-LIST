@@ -48,3 +48,16 @@ function getInfoTask() {
     localStorage.setItem("customListTask",customListTask.value);
     localStorage.setItem("colorTask", colorTask.value);
 }
+
+function printTask(){
+    localStorage.getItem("titleTask");
+    localStorage.getItem("descriptionTask");
+    localStorage.getItem("completedTask");
+    localStorage.getItem("importantTask");
+    localStorage.getItem("customListTask");
+    localStorage.getItem("colorTask");
+}
+
+function init(){
+    printTask;
+}
