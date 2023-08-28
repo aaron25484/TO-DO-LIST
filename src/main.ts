@@ -29,11 +29,30 @@ function closeModal() {
     }, 800); 
 }
 
-let submitTask = document.querySelector('#submitTask');
+type Task = {
+    title:string,
+    description:string,
+    completed:string,
+    important:string,
+    custom:string,
+    color:string
+}
 
-submitTask?.addEventListener('click', getInfoTask)
+function printTask(task:Task){
+    localStorage.getItem("titleTask");
+    localStorage.getItem("descriptionTask");
+    localStorage.getItem("completedTask");
+    localStorage.getItem("importantTask");
+    localStorage.getItem("customListTask");
+    localStorage.getItem("colorTask");
 
-function getInfoTask() {
+    let mainCheck = document.querySelector("#checkMain");
+    let maintitle = document.querySelector("#titleMainTask");
+    let mainImportant = document.querySelector("#importantMain");
+}
+
+
+function getInfoTask(task:Task) {
     let titleTask = document.querySelector('#title') as HTMLInputElement;
     let descriptionTask = document.querySelector('#description') as HTMLTextAreaElement;
     let completedTask = document.querySelector('#completed') as HTMLInputElement;
@@ -49,15 +68,10 @@ function getInfoTask() {
     localStorage.setItem("colorTask", colorTask.value);
 }
 
-function printTask(){
-    localStorage.getItem("titleTask");
-    localStorage.getItem("descriptionTask");
-    localStorage.getItem("completedTask");
-    localStorage.getItem("importantTask");
-    localStorage.getItem("customListTask");
-    localStorage.getItem("colorTask");
-}
 
+let submitTask = document.querySelector('#submitTask');
+
+// submitTask?.addEventListener('click', getInfoTask);
 function init(){
     printTask;
 }
